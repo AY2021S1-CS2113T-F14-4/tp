@@ -17,6 +17,7 @@ Wan Shi Jie Brendan<br>
 <div style="page-break-after: always;"></div>
 
 ## Table of Contents
+
 * [1. Introduction](#intro)
 * [2. Getting Started](#getting_started)<br>
     * [2.1. Prerequisites](#prerequisites)<br>
@@ -350,7 +351,40 @@ object.
 
 ### 4.16 User Info<a id="user_info"></a>
 
+<<<<<<< HEAD
 This feature allows users to mark an event as done, provided the event's time has passed. 
+=======
+1. The user enters `delete NUMBER` where `NUMBER` refers to the index of the command to be deleted. The user input is parsed by the Parser class which creates a new `DeleteCommand` object.
+
+2. `Eventlist#remove()` is called which will delete the event with the specified index.
+### 4.11 Find 
+
+### 4.12 Print locations
+This feature allows users to know locations in a certain faculty, including blocks and lecture theatres when users input
+abbreviations of various faculties (e.g. FOS).
+
+The sequence diagram belows shows what happens when user input any faculty abbreviation: <br>
+![PrintAreaLocationsCommand Sequence Diagram](diagrams/printAreaLocationsCommand.png)<br>
+*Figure 4.12 Sequence Diagram for print area locations function*
+
+### 4.13 Study Time
+
+### 4.14 User Info
+
+### 4.15 Done 
+This feature allows users to mark an event as done, provided the event's time has passed. With the exception of event 
+type `Assignment`, all the other event types cannot be marked as done before event occurs. 
+
+`DoneCommand` marks an event as done with the following steps: 
+
+Step 1. The user will input `done` followed by an integer that represents the index of the event they want to mark as 
+done. 
+
+Step 2. The program will first check if the index is valid. If invalid, application will print an error message. 
+
+Step 3. Then it will check for the type and time of event. If the time of event is later, and the event is not an 
+`Assignment`, then it will print a warning message. Else, it will mark the event as done.
+>>>>>>> e369a17fe371023a3a0ffbe95eac44c9615844a0
 
 ## 5. Documentation
   
